@@ -1,19 +1,22 @@
 import './App.css'
 import Title from './components/Title';
 import Counter from './components/Counter';
-//  pegar uma imagem  // import YOURBIRTHDAY from "./assets/yourbirthday.jpg"
+import Ano from "./assets/ano.jpg"
+import useCountdown from './hooks/useCountdown';
 
 
 function App() {
+   const [day,hour,minute,second] = useCountdown("Jan 1, 2024 00:00:00");
+
   return (
-    <div className="App" style={{ backgroundImage: 'url(${YOURBIRTHDAY})' }}>
+    <div className="App" style={{ backgroundImage:'url(${Ano})' }}>
       <div className="container">
         <Title title="Contagem regressiva para 2025" />
         <div className="countdown-container">
-          <Counter title="Dias" number={2} />
-          <Counter title="Horas" number={2} />
-          <Counter title="Minutos" number={2} />
-          <Counter title="Segundos" number={2} />
+          <Counter title="Dias" number={day} />
+          <Counter title="Horas" number={hour} />
+          <Counter title="Minutos" number={minute} />
+          <Counter title="Segundos" number={second} />
         </div>
       </div>
     </div>
