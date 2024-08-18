@@ -2,7 +2,7 @@ import Title from "../components/Title";
 import Counter from "../components/Counter";
 
 import { useContext, useEffect } from "react";
-import { CountdownContext } from "../context/CountdownContext";
+//import { CountdownContext } from "../context/CountdownContext";
 
 import useCountdown from "../hooks/useCountdown";
 import { Navigate } from "react-router-dom";
